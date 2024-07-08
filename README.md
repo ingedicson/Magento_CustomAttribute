@@ -19,7 +19,7 @@ bin/magento cache:flush
 
 ### Step 3: Test the Module
 
-1.Access the Magento Backend: Open your browser and access the Magento admin panel. The default URL will be something like http://your_website/admin.
+1. Access the Magento Backend: Open your browser and access the Magento admin panel. The default URL will be something like http://your_website/admin.
 Log in with the admin credentials you set during installation.
 
 2. Verify the Custom Attribute Configuration: Navigate to Stores > Configuration.
