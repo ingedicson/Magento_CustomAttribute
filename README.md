@@ -3,13 +3,14 @@
 
 ### Step 1: Set Up the Magento 2 Instance
 
-Clone the Repository (if applicable): If you are using a version control repository (e.g., Git), clone the repository to your local machine.
-URL repository
+Clone the repository to your local machine.
+git clone https://github.com/ingedicson/Magento_CustomAttribute.git
 
 ### Step 2: Enable and Configure the Module
 
 1. Enable the Module: Enable the Ciandt_CustomAttribute module.
 bin/magento module:enable Ciandt_CustomAttribute
+
 2. Run Commands: Execute the necessary commands to ensure the module is fully configured.
 bin/magento setup:upgrade
 bin/magento setup:static-content:deploy -f
@@ -18,25 +19,24 @@ bin/magento cache:flush
 
 ### Step 3: Test the Module
 
-1.Access the Magento Backend:
-Open your browser and access the Magento admin panel. The default URL will be something like http://your_website/admin.
+1.Access the Magento Backend: Open your browser and access the Magento admin panel. The default URL will be something like http://your_website/admin.
 Log in with the admin credentials you set during installation.
-2. Verify the Custom Attribute Configuration:
-Navigate to Stores > Configuration.
+
+2. Verify the Custom Attribute Configuration: Navigate to Stores > Configuration.
 Look for the Custom Attribute section and verify that the Enable Custom Attribute option is available and enabled.
-3. Edit a Product and Assign the Custom Attribute:
-Navigate to Catalog > Products.
+
+3. Edit a Product and Assign the Custom Attribute: Navigate to Catalog > Products.
 Edit one of the products and verify that the Custom Product Attribute field is available in the product details section.
 Assign a value to this attribute and save the product.
-4. Verify the Attribute on the Frontend:
-Open the frontend of your website and navigate to the product page that you edited.
+
+4. Verify the Attribute on the Frontend: Open the frontend of your website and navigate to the product page that you edited.
 Verify that the custom attribute is displayed correctly on the product page.
-5. Test the Console Command:
-Open a terminal and run the following command to update the custom attribute value for all products:
+
+5. Test the Console Command: Open a terminal and run the following command to update the custom attribute value for all products:
 bin/magento custom:attribute:update "New Value"
 Verify that the custom attribute value has been updated correctly for all products.
-6. Verify the Attribute in the Backend Product Grid:
-Navigate to Catalog > Products.
+
+6. Verify the Attribute in the Backend Product Grid: Navigate to Catalog > Products.
 Verify that the Custom Product Attribute column is displayed in the product grid and that the values are correctly shown for each product.
 
 ### Approach to Solving Each Requirement
