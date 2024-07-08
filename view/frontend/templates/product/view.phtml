@@ -1,0 +1,26 @@
+<?php
+
+// get Custom Attibute
+$helper = $block->getCustomAttributeHelper();
+
+// Verify global parameter
+if ($helper->isEnabled()) {
+
+    // get Product from block
+    $_product = $block->getProduct();
+
+    if ($_product) {
+        $customAttribute = $_product->getCustomAttribute('custom_product_attribute');
+        $customAttributeValue = $customAttribute ? $customAttribute->getValue() : '';
+        ?>
+        <div class="product custom-attribute">
+            <label for="custom_attribute"><?php echo __('Custom Product Attribute:'); ?></label>
+            <input type="text" id="custom_attribute" name="custom_attribute" value="<?php echo $customAttributeValue; ?>" />
+        </div>
+        <?php
+    } else {
+        echo '<div class="product custom-attribute">Product not found</div>';
+    }
+}
+
+?>
